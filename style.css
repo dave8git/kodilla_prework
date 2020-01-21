@@ -33,6 +33,15 @@ section {
     background-attachment: fixed;
 }
 
+.splash i {
+    font-size: 30px;
+    background: #ff5e57;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    border-radius: 50%;
+}
 .splash-inner {
     position: absolute; 
     width: 100%; 
@@ -40,4 +49,22 @@ section {
     left: 50%; 
     transform: translate(-50%, -50%); 
     color: white;
+}
+.page-title {
+    color: #fff;
+    font-size: 60px;
+    margin: 48px 0 0 0; 
+    font-family: monospace;
+    position: relative;
+    font-variant: small-caps;
+}
+.page-title::after {
+    position: absolute; 
+    content: '';
+    bottom: -24px;
+    left: 50%;
+    width: 100px;
+    height: 10px;
+    transform: translateX(-50%);
+    background-color: #ff5e57;
 }
