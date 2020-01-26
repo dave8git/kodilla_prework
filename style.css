@@ -256,4 +256,8 @@ section {
       /* transform: translateY(-50%); */
   }
 
+  ul {
+      padding-inline-start: 0%;
+  }
+
 
