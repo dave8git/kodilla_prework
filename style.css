@@ -3,15 +3,23 @@ font-family: 'Josefin Sans', sans-serif;
 font-family: 'Open Sans', sans-serif;
 */
 
+
 /* Global */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-
+.clearfix {
+    clear: both;
+    content: "";
+    display: table;
+}
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -25,6 +33,7 @@ body {
 section {
     padding: 108px 0;
 }
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -32,14 +41,14 @@ section {
 }
 
 .section-title {
-    position: relative; 
-    font-size: 36px; 
+    position: relative;
+    font-size: 36px;
     margin: 0 0 60px 0;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 .section-title::after {
-    position: absolute; 
+    position: absolute;
     content: '';
     bottom: -24px;
     left: 50%;
@@ -48,6 +57,8 @@ section {
     transform: translateX(-50%);
     background-color: #ff5e57;
 }
+
+
 /* splash */
 
 .splash {
@@ -68,25 +79,28 @@ section {
     color: #fff;
     border-radius: 50%;
 }
+
 .splash-inner {
-    position: absolute; 
-    width: 100%; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
 }
+
 .page-title {
     color: #fff;
     font-size: 60px;
-    margin: 48px 0 0 0; 
+    margin: 48px 0 0 0;
     font-family: monospace;
     position: relative;
     font-variant: small-caps;
     font-family: 'Josefin Sans', sans-serif;
 }
+
 .page-title::after {
-    position: absolute; 
+    position: absolute;
     content: '';
     bottom: -24px;
     left: 50%;
@@ -95,11 +109,14 @@ section {
     transform: translateX(-50%);
     background-color: #ff5e57;
 }
+
 .page-subtitle {
     margin: 48px 0 0 0;
     font-size: 18px;
     color: #fff;
 }
+
+
 /* Intro */
 
 .intro {
@@ -107,23 +124,27 @@ section {
 }
 
 .intro p {
-    width: 70%; 
+    width: 70%;
     margin: 0 auto;
     padding: 48px 0;
-    font-size: 24px; 
-    border-top: 1px solid #3d3d3d; 
+    font-size: 24px;
+    border-top: 1px solid #3d3d3d;
     border-bottom: 1px solid #3d3d3d;
 }
 
+
 /* About */
+
 .about {
-    background: #f0f0f0; 
+    background: #f0f0f0;
 }
 
+
 /* Skills */
+
 .skills ul {
     list-style-type: none;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
@@ -133,24 +154,26 @@ section {
 
 .skill-image {
     position: absolute;
-    width: 50%; 
-    height: 100%; 
+    width: 50%;
+    height: 100%;
     overflow: hidden;
 }
 
 .skill-image img {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .skill.right .skill-image {
     right: 0;
 }
+
 .skill.right .skill-description {
     padding: 36px 55% 36px 0;
     text-align: right;
 }
+
 .skill.left .skill-description {
     padding: 36px 0 36px 55%;
     text-align: right;
@@ -163,7 +186,11 @@ section {
 .skill-image img {
     transition: all 1s;
 }
+
+
 /* Gallery */
+
+.gallery {}
 
 .gallery-image {
     position: relative;
@@ -171,63 +198,46 @@ section {
     float: left;
     width: 33.33333333333333333%;
     height: 300px;
-    background-size: 100%; 
+    background-size: 100%;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
     transition: 0.5s;
 }
 
 .gallery-image:hover {
     background-size: 110%;
-    z-index: 2;
 }
 
-.gallery-image:hover::after {
+.gallery-button-section:after {
     position: absolute;
-    /* display: block; */
-    content: "";
-    background-color: rgb(0,0,0, 0.5);
-    width: 100%;
-    height: 100%;
     top: 0;
-    left: 0; 
-    bottom: 0; 
-    right: 0;
-}
-.image1 {
-    background-image: url("https://i.postimg.cc/02pDvv9F/pexels-photo-3432223.jpg");
-}
-.image2 {
-    background-image: url("https://i.postimg.cc/cJ1QTzyj/white-iphone-xr-3586249.jpg");
-}
-.image3 {
-    background-image: url("https://i.postimg.cc/zBs8D9qP/pexels-photo-3418058.jpg");
-}
-.image4 {
-    background-image: url("https://i.postimg.cc/zBs8D9qP/pexels-photo-3418058.jpg");
-}
-.image5 {
-    background-image: url("https://i.postimg.cc/cJ1QTzyj/white-iphone-xr-3586249.jpg");
-}
-.image6 {
-    background-image: url("https://i.postimg.cc/02pDvv9F/pexels-photo-3432223.jpg");
-}
-
-.gallery-button-section {
-    display: none;
-    position: relative;
-    width: 100%; 
-    height: 100%; 
-    top: 0; 
+    bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
+    white-space: pre-wrap;
+    /* overflow: hidden; */
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+    color: #fff;
+    z-index: 3;
+    opacity: 0;
+    transition: 0.5s;
 }
 
-.gallery-image p {
-    display: none;
+.gallery-button-section:hover:after {
+    opacity: 1;
+    top: 0;
+    z-index: 1;
 }
 
-.gallery-image:hover .gallery-button-section {
-    display: block;
+.gallery-button-section:hover .gallery-button {
+    opacity: 1;
+}
+
+.gallery-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -240,24 +250,58 @@ section {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    z-index: 333;
-    transition: 0.5;
-    width: 150px;
-    height: 50px;
-  }
+    opacity: 0;
+    z-index: 3;
+}
 
-  .gallery-image:hover p {
-      display: block;
-      position: absolute;
-      top: 20%;
-      left: 43%;
-      color: white;
-      z-index: 1001;
-      /* transform: translateY(-50%); */
-  }
+.gallery-text {
+    position: absolute;
+    display: block;
+    z-index: 5;
+    color: #fff;
+    opacity: 0;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+}
 
-  ul {
-      padding-inline-start: 0%;
-  }
+.gallery-button-section:hover .gallery-text {
+    opacity: 1;
+}
 
+.image1 {
+    background-image: url("https://i.postimg.cc/02pDvv9F/pexels-photo-3432223.jpg");
+}
 
+.image2 {
+    background-image: url("https://i.postimg.cc/cJ1QTzyj/white-iphone-xr-3586249.jpg");
+}
+
+.image3 {
+    background-image: url("https://i.postimg.cc/zBs8D9qP/pexels-photo-3418058.jpg");
+}
+
+.image4 {
+    background-image: url("https://i.postimg.cc/zBs8D9qP/pexels-photo-3418058.jpg");
+}
+
+.image5 {
+    background-image: url("https://i.postimg.cc/cJ1QTzyj/white-iphone-xr-3586249.jpg");
+}
+
+.image6 {
+    background-image: url("https://i.postimg.cc/02pDvv9F/pexels-photo-3432223.jpg");
+}
+
+ul {
+    padding-inline-start: 0%;
+}
+
+.page-footer {
+    width: 100%;
+    height: 40px;
+    background-color: green;
+    margin-top: 54px;
+    bottom: 0;
+    z-index: 5;
+}
